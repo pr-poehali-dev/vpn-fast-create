@@ -223,6 +223,14 @@ const Index = () => {
                 <Icon name="CreditCard" size={20} className="mr-2" />
                 Подписка
               </Button>
+              <Button 
+                variant="outline" 
+                className="w-full justify-start"
+                onClick={() => window.location.href = '/admin'}
+              >
+                <Icon name="ServerCog" size={20} className="mr-2" />
+                Управление серверами
+              </Button>
               <Button variant="outline" className="w-full justify-start">
                 <Icon name="LogOut" size={20} className="mr-2" />
                 Выйти

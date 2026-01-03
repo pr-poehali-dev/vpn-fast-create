@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "Find best server for user location",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "latitude": 55.7558,
+        "longitude": 37.6173
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "server": "object",
+        "reason": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

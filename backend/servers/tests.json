@@ -1,0 +1,38 @@
+{
+  "tests": [
+    {
+      "name": "Get active servers",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "servers": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Add new server",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Test Server NL",
+        "country": "Netherlands",
+        "city": "Amsterdam",
+        "ip_address": "45.67.89.123",
+        "port": 51820,
+        "latitude": 52.3676,
+        "longitude": 4.9041,
+        "config_type": "amnezia",
+        "config_data": "[Interface]\nPrivateKey=test_key\nAddress=10.0.0.1/24",
+        "ping_ms": 15,
+        "bandwidth_mbps": 1000
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "success": true,
+        "server": "object"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
